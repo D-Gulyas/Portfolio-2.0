@@ -763,3 +763,560 @@ body {
         height: 250px;
     }
 }
+
+
+/* ===== ERWEITERTE STYLES FÜR DIMENSION RISS ===== */
+
+/* Projekt Modal */
+.project-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    z-index: 2001;
+    background: rgba(15, 15, 35, 0.95);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--accent-color);
+}
+
+.modal-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.modal-features {
+    margin: 2rem 0;
+}
+
+.modal-features ul {
+    list-style: none;
+    padding-left: 1rem;
+}
+
+.modal-features li {
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.modal-features li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+}
+
+.modal-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Projekt Navigation */
+.projects-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.nav-arrow {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(15, 15, 35, 0.7);
+    border: 2px solid var(--primary-color);
+    color: var(--light-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-arrow:hover {
+    background: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.nav-dots {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(108, 92, 231, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-dot.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Energie-Orbs in Projekten */
+.energy-orb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--secondary-color), transparent);
+    filter: blur(2px);
+    opacity: 0.7;
+    transition: transform 0.3s ease;
+}
+
+.orb-1 {
+    top: 20%;
+    left: 20%;
+}
+
+.orb-2 {
+    bottom: 20%;
+    right: 20%;
+}
+
+/* Hologramm Projekt Effekt */
+.project-hologram {
+    position: relative;
+    height: 200px;
+    background: rgba(108, 92, 231, 0.1);
+    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hologram-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 30%, rgba(108, 92, 231, 0.1) 50%, transparent 70%);
+    animation: hologramScan 3s infinite linear;
+}
+
+.project-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+}
+
+/* Cyber Interface für Skills */
+.cyber-interface {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+    .cyber-interface {
+        grid-template-columns: 1fr;
+    }
+}
+
+.interface-panel {
+    background: rgba(15, 15, 35, 0.7);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.panel-header {
+    background: rgba(108, 92, 231, 0.2);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+}
+
+.panel-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.panel-btn {
+    padding: 0.5rem 1rem;
+    background: rgba(10, 10, 24, 0.5);
+    border: 1px solid var(--gray-color);
+    color: var(--light-color);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+.panel-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(108, 92, 231, 0.2);
+}
+
+.scan-btn i {
+    animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Neon Card Effekt */
+.neon-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.neon-card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color), var(--primary-color));
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.neon-card:hover::before {
+    opacity: 1;
+    animation: neonGlow 2s linear infinite;
+}
+
+@keyframes neonGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, rgba(108, 92, 231, 0.1) 70%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.neon-card:hover .card-glow {
+    opacity: 1;
+}
+
+/* Kontakt Matrix */
+.contact-matrix {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.matrix-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .matrix-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.matrix-cell {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(10, 10, 24, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+.matrix-cell i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.cell-content h4 {
+    color: var(--light-color);
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.status-online {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    animation: pulseDot 2s infinite;
+}
+
+/* Social Portal */
+.social-portal {
+    margin-top: 2rem;
+}
+
+.portal-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.portal-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(10, 10, 24, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+    color: var(--light-color);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.portal-link:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(108, 92, 231, 0.2);
+}
+
+.portal-link i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.portal-link span {
+    font-size: 0.9rem;
+}
+
+/* Form Transmission */
+.form-transmission {
+    margin-top: 2rem;
+    padding: 1rem;
+    background: rgba(10, 10, 24, 0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+.transmission-bar {
+    height: 4px;
+    background: rgba(108, 92, 231, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.transmission-progress {
+    height: 100%;
+    width: 30%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+    animation: transmissionScan 3s infinite ease-in-out;
+}
+
+@keyframes transmissionScan {
+    0%, 100% { transform: translateX(-100%); }
+    50% { transform: translateX(300%); }
+}
+
+.transmission-text {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* ASCII Footer */
+.ascii-art {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.ascii-logo {
+    font-family: monospace;
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    line-height: 1.2;
+    display: inline-block;
+    text-align: left;
+}
+
+.terminal-footer {
+    background: rgba(10, 10, 24, 0.8);
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.terminal-output {
+    margin-top: 0.5rem;
+    color: #00ff00;
+}
+
+.terminal-output .terminal-line {
+    margin-bottom: 0.3rem;
+    animation: terminalFadeIn 0.5s ease;
+}
+
+@keyframes terminalFadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Rift Energy in Sections */
+.rift-energy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: radial-gradient(circle at center, transparent 30%, rgba(108, 92, 231, 0.05) 70%);
+}
+
+.data-stream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(0, 206, 201, 0.05) 1px,
+            rgba(0, 206, 201, 0.05) 2px
+        );
+    animation: dataStreamFlow 20s linear infinite;
+}
+
+@keyframes dataStreamFlow {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 100px; }
+}
+
+.cyber-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background-image: 
+        linear-gradient(rgba(108, 92, 231, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(108, 92, 231, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    opacity: 0.1;
+}
+
+.portal-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 70% 80%, rgba(0, 206, 201, 0.1) 0%, transparent 50%);
+    animation: portalPulse 10s infinite alternate;
+}
+
+@keyframes portalPulse {
+    0% { opacity: 0.1; }
+    100% { opacity: 0.3; }
+}
