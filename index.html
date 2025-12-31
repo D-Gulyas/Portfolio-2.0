@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hintergrund-Elemente -->
+    <div class="particles-container" id="particles-js"></div>
+    <div class="grid-overlay"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">DEV<span class="logo-accent">></span></a>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Über mich</a></li>
+                <li><a href="#projects">Projekte</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="https://github.com" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">HI, ICH BIN</span>
+                <span class="title-name">MAX MUSTERMANN</span>
+                <span class="title-sub">GAME DEVELOPER</span>
+            </h1>
+            <p class="hero-description">
+                Ich erschaffe immersive Welten und innovative Spielerlebnisse 
+                mit modernster Technologie und kreativem Design.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Meine Projekte</a>
+                <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="cube-container">
+                <div class="cube">
+                    <div class="face front">C#</div>
+                    <div class="face back">Unity</div>
+                    <div class="face right">C++</div>
+                    <div class="face left">Unreal</div>
+                    <div class="face top">3D</div>
+                    <div class="face bottom">VR</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Über mich -->
+    <section id="about" class="section about">
+        <div class="section-header">
+            <h2 class="section-title"><span class="title-number">01.</span> Über mich</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-content">
+            <div class="about-text">
+                <p>
+                    Ich bin ein leidenschaftlicher Game Development Student mit Fokus auf 
+                    Programmierung, Gameplay-Design und 3D-Grafiken. Meine Stärken liegen 
+                    in der Umsetzung komplexer Spielmechaniken und der Optimierung von 
+                    Performance in Echtzeit-Anwendungen.
+                </p>
+                <p>
+                    Aktuell studiere ich IT mit Fachrichtung Game Development an der 
+                    Muster-Universität und suche nach spannenden Herausforderungen in 
+                    der Spieleindustrie.
+                </p>
+                <div class="about-details">
+                    <div class="detail-item">
+                        <h3>Bildung</h3>
+                        <p>B.Sc. Game Development</p>
+                        <p>Muster-Universität, 2022 - heute</p>
+                    </div>
+                    <div class="detail-item">
+                        <h3>Fokus</h3>
+                        <p>Gameplay-Programmierung</p>
+                        <p>3D-Grafik & Shader</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="image-frame">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-secret"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects" class="section projects">
+        <div class="section-header">
+            <h2 class="section-title"><span class="title-number">02.</span> Meine Projekte</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="projects-grid" id="projects-grid">
+            <!-- Projekte werden via JS geladen -->
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section skills">
+        <div class="section-header">
+            <h2 class="section-title"><span class="title-number">03.</span> Fähigkeiten & Technologien</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> Programmierung</h3>
+                <div class="skill-list">
+                    <div class="skill-item" data-level="90">
+                        <span>C# / .NET</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="85">
+                        <span>C++</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="80">
+                        <span>Python</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="95">
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-gamepad"></i> Engines & Tools</h3>
+                <div class="skill-list">
+                    <div class="skill-item" data-level="95">
+                        <span>Unity</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="75">
+                        <span>Unreal Engine</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="85">
+                        <span>Git / GitHub</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="70">
+                        <span>Blender</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-paint-brush"></i> Design & Konzepte</h3>
+                <div class="skill-list">
+                    <div class="skill-item" data-level="85">
+                        <span>Game Design</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="80">
+                        <span>UI/UX Design</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="75">
+                        <span>3D Modeling</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill-item" data-level="90">
+                        <span>Prototyping</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="section contact">
+        <div class="section-header">
+            <h2 class="section-title"><span class="title-number">04.</span> Kontakt</h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h3>Lass uns zusammenarbeiten!</h3>
+                <p>
+                    Ich bin immer offen für neue Herausforderungen und spannende 
+                    Projekte im Bereich Game Development.
+                </p>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>max.mustermann@example.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>+49 123 456789</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Musterstadt, Deutschland</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" placeholder="Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="E-Mail" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="Betreff" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Nachricht" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Nachricht senden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">DEV<span class="logo-accent">></span></div>
+            <p class="footer-text">Erstellt mit Leidenschaft für Game Development</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">Über mich</a>
+                <a href="#projects">Projekte</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+            <p class="footer-copyright">© 2023 Max Mustermann. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Skripte -->
+    <script src="js/particles.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
