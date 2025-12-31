@@ -179,12 +179,16 @@ function initFooterLog() {
     const messages = [
         "SYSTEM: All systems operational",
         "DIMENSION: Stable",
-        "NETWORK: Connected",
+        "NETWORK: Connected to GitHub",
         "SECURITY: Encrypted",
         "PROJECTS: Loaded successfully",
         "CONTACT: Ready for transmission",
         "TIME: " + new Date().toLocaleTimeString(),
-        "STATUS: Portfolio active"
+        "STATUS: Portfolio active and online",
+        "USER: Dennis Gulyas authenticated",
+        "LOCATION: Portfolio-2.0 repository",
+        "BUILD: Dimension Riss v2.0",
+        "UPTIME: 99.9%"
     ];
     
     let messageIndex = 0;
