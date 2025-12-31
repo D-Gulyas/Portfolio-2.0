@@ -1,59 +1,34 @@
-# Game Development Portfolio
+# 🌀 Game Development Portfolio - Dimension Riss
 
-Ein professionelles und kreatives Portfolio für einen Game Development Studenten, erstellt mit modernen Web-Technologien.
+Ein einzigartiges Game Development Portfolio mit **Stranger Things/80er Sci-Fi Theme**, komplett mit interaktiven Dimension Riss Effekten.
 
-## Features
+![Portfolio Preview](https://img.shields.io/badge/Status-Online-success) ![License](https://img.shields.io/badge/License-MIT-blue)
 
-- **Responsive Design**: Optimiert für alle Geräte
-- **Moderne UI/UX**: Cleanes Design mit Gaming-Ästhetik
-- **Interaktive Elemente**: Partikel-Hintergrund, Animationen, Skill-Bars
-- **Projekt-Präsentation**: Dynamische Projektkarten mit Filterung
-- **Kontaktformular**: Funktionales Kontaktformular
-- **Performance**: Optimiert für schnelle Ladezeiten
+## ✨ Features
 
-## Technologien
+- **🎮 Game Development Fokus** - Speziell für Game Developer optimiert
+- **🌀 Dimension Riss Effekte** - Interaktive Stranger Things Style Effekte
+- **🕹️ Retro 80er Sci-Fi Design** - CRT, Glitch, Scanlines, Terminal Stil
+- **⚡ Performance Optimiert** - Schnelle Ladezeiten, sauberer Code
+- **📱 Voll Responsive** - Perfekt auf allen Geräten
+- **🎨 Customizable** - Einfach anpassbar für deine Projekte
 
-- HTML5, CSS3, JavaScript (ES6+)
-- CSS Animations & Transitions
-- CSS Grid & Flexbox
-- Font Awesome Icons
-- Google Fonts (Orbitron, Roboto)
+## 🚀 Live Demo
 
-## Projektstruktur
+Das Portfolio ist live verfügbar unter:  
+🌐 **https://dein-username.github.io/portfolio-dimension/**
 
-## Anpassungen
+## 📁 Projektstruktur
 
-### Persönliche Daten ändern
-1. Namen und Kontaktdaten in `index.html` anpassen
-2. Projekte in `js/projects.js` bearbeiten oder hinzufügen
-3. Skill-Level in `index.html` anpassen
-
-### Design anpassen
-- Farben: CSS-Variablen in `:root` in `style.css`
-- Schriftarten: Google Fonts Links in `index.html`
-- Layout: CSS-Klassen in `style.css`
-
-### GitHub Pages einrichten
-1. Repository auf GitHub hochladen
-2. Zu Settings → Pages navigieren
-3. Branch auf `main` setzen und speichern
-4. Portfolio ist unter `https://d-gulyas.github.io/Portfolio-2.0/index.html` erreichbar
-
-## Optimierungen für Bewerbungen
-
-1. **Echte Projekte** einbinden mit Screenshots und GitHub-Links
-2. **LinkedIn-Profil** verlinken
-3. **Lebenslauf** als PDF zum Download anbieten
-4. **Performance optimieren**: Bilder komprimieren, Code minifizieren
-5. **SEO**: Meta-Tags in `index.html` ergänzen
-
-## Browser Support
-
-- Chrome (neueste Version)
-- Firefox (neueste Version)
-- Safari (neueste Version)
-- Edge (neueste Version)
-
-## Lizenz
-
-Dieses Portfolio ist für persönliche und kommerzielle Nutzung frei verfügbar. Attribution wird geschätzt, aber nicht verlangt.
+portfolio-dimension/
+├── index.html # Haupt HTML Datei
+├── css/
+│ ├── style.css # Haupt Styles
+│ └── dimension.css # Dimension Effekte
+├── js/
+│ ├── main.js # Haupt Logik
+│ ├── dimension.js # Riss Effekte
+│ └── projects.js # Projekte Daten
+├── assets/ # Bilder & Dateien
+├── README.md # Diese Datei
+└── .nojekyll # GitHub Pages Config
