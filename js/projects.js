@@ -1,4 +1,4 @@
-// Projects Data for Dennis Gulyas
+// Projects Data for Dennis Gulyas - MIT BILDERN
 const projects = [
     {
         id: 1,
@@ -8,17 +8,45 @@ const projects = [
         github: "https://github.com/D-Gulyas/quantum-rift",
         demo: "https://d-gulyas.itch.io/quantum-rift",
         icon: "fa-atom",
-        filter: "unity"
+        filter: "unity",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=450&fit=crop",
+                caption: "Hauptmenü mit Dimensionen-Auswahl"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=800&h=450&fit=crop",
+                caption: "Gameplay-Szene in der Quanten-Dimension"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1531816458010-fb768453ea86?w=800&h=450&fit=crop",
+                caption: "VR-Interaktion mit Objekten"
+            }
+        ]
     },
     {
         id: 2,
-        "title": "CYBER RUNNER",
+        title: "CYBER RUNNER",
         description: "Cyberpunk Endless Runner mit dynamischen Level-Generation. Sammle Upgrades, vermeide Hindernisse und erreiche Highscores in einer neon-beleuchteten Stadt.",
         tech: ["Unity", "C#", "3D", "Procedural"],
         github: "https://github.com/D-Gulyas/cyber-runner",
         demo: "https://d-gulyas.itch.io/cyber-runner",
         icon: "fa-running",
-        filter: "unity"
+        filter: "unity",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=450&fit=crop",
+                caption: "Hauptcharakter im Cyberpunk-Stil"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=450&fit=crop",
+                caption: "Neon-beleuchtete Stadtumgebung"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=450&fit=crop",
+                caption: "Gameplay mit Hindernissen und Power-ups"
+            }
+        ]
     },
     {
         id: 3,
@@ -28,7 +56,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/dimension-defender",
         demo: "https://d-gulyas.itch.io/dimension-defender",
         icon: "fa-shield-alt",
-        filter: "unity"
+        filter: "unity",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=450&fit=crop",
+                caption: "Tower Placement Interface"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=450&fit=crop",
+                caption: "Welle von Gegnern aus verschiedenen Dimensionen"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=450&fit=crop",
+                caption: "Upgrade-Menü mit Spezialfähigkeiten"
+            }
+        ]
     },
     {
         id: 4,
@@ -38,7 +80,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/void-explorer",
         demo: "https://d-gulyas.itch.io/void-explorer",
         icon: "fa-space-shuttle",
-        filter: "unreal"
+        filter: "unreal",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=450&fit=crop",
+                caption: "Raumschiff im Weltraum"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=450&fit=crop",
+                caption: "Fremder Planet mit alien Artefakten"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&h=450&fit=crop",
+                caption: "Cockpit-Ansicht mit HUD"
+            }
+        ]
     },
     {
         id: 5,
@@ -48,7 +104,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/synthspace-ar",
         demo: "https://d-gulyas.itch.io/synthspace",
         icon: "fa-music",
-        filter: "vr"
+        filter: "vr",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=800&h=450&fit=crop",
+                caption: "AR-Musikvisualisierung in realer Umgebung"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=450&fit=crop",
+                caption: "Sound-Wellen Visualisierung"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=450&fit=crop",
+                caption: "Effekt-Editor Interface"
+            }
+        ]
     },
     {
         id: 6,
@@ -58,7 +128,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/data-stream",
         demo: "https://d-gulyas.itch.io/data-stream",
         icon: "fa-stream",
-        filter: "unity"
+        filter: "unity",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=450&fit=crop",
+                caption: "Hauptmenü mit Level-Auswahl"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=450&fit=crop",
+                caption: "Puzzle-Lösungsmechanik"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1534423861386-85a16f5d13fd?w=800&h=450&fit=crop",
+                caption: "Komplexes Datenfluss-Puzzle"
+            }
+        ]
     },
     {
         id: 7,
@@ -68,7 +152,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/neo-tokyo-racer",
         demo: "https://d-gulyas.itch.io/neo-tokyo",
         icon: "fa-car",
-        filter: "unreal"
+        filter: "unreal",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&h=450&fit=crop",
+                caption: "Futuristisches Rennfahrzeug"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=800&h=450&fit=crop",
+                caption: "Cyberpunk-Stadt bei Nacht"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800&h=450&fit=crop",
+                caption: "Rennstrecke mit dynamischem Wetter"
+            }
+        ]
     },
     {
         id: 8,
@@ -78,7 +176,21 @@ const projects = [
         github: "https://github.com/D-Gulyas/biome-simulator",
         demo: "https://d-gulyas.itch.io/biome-sim",
         icon: "fa-seedling",
-        filter: "unity"
+        filter: "unity",
+        images: [
+            {
+                src: "https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&h=450&fit=crop",
+                caption: "Generiertes Ökosystem"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=800&h=450&fit=crop",
+                caption: "Evolution von digitalen Lebensformen"
+            },
+            {
+                src: "https://images.unsplash.com/photo-1502134249126-9f3755a50d78?w=800&h=450&fit=crop",
+                caption: "Statistiken und Analysen"
+            }
+        ]
     }
 ];
 
@@ -180,6 +292,14 @@ function openProjectModal(projectId) {
                     ${project.tech.map(tech => `<span class="tech-tag">${tech}</span>`).join('')}
                 </div>
                 <p class="project-modal-description">${project.description}</p>
+                
+                <!-- GALLERY SECTION -->
+                <div class="project-gallery">
+                    <h4><i class="fas fa-images"></i> SCREENSHOTS & MEDIA</h4>
+                    <div class="gallery-grid" id="gallery-${project.id}">
+                        <!-- Images will be loaded here -->
+                    </div>
+                </div>
                 
                 <div class="project-details-grid">
                     <div class="detail-section">
@@ -293,6 +413,9 @@ function openProjectModal(projectId) {
     overlay.classList.add('active');
     document.body.style.overflow = 'hidden';
     
+    // Load gallery images
+    loadGalleryImages(project);
+    
     // Add close event
     const closeBtn = modalContent.querySelector('.project-modal-close');
     if (closeBtn) {
@@ -312,6 +435,45 @@ function openProjectModal(projectId) {
             closeProjectModal();
         }
     });
+}
+
+function loadGalleryImages(project) {
+    const galleryGrid = document.getElementById(`gallery-${project.id}`);
+    if (!galleryGrid || !project.images) return;
+    
+    project.images.forEach((image, index) => {
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.dataset.index = index;
+        
+        galleryItem.innerHTML = `
+            <div class="gallery-placeholder">
+                <i class="fas fa-image"></i>
+                <span>Bild ${index + 1}</span>
+            </div>
+            <img class="gallery-preview" src="${image.src}" alt="${image.caption}" loading="lazy">
+        `;
+        
+        galleryGrid.appendChild(galleryItem);
+        
+        // Load image
+        const img = new Image();
+        img.src = image.src;
+        img.onload = function() {
+            galleryItem.classList.add('loaded');
+        };
+        
+        // Add click event for lightbox
+        galleryItem.addEventListener('click', function() {
+            openLightbox(image.src, image.caption, project.images);
+        });
+    });
+}
+
+function openLightbox(imgSrc, caption, images) {
+    if (typeof window.openLightbox === 'function') {
+        window.openLightbox(imgSrc, caption, images);
+    }
 }
 
 function closeProjectModal() {
@@ -351,260 +513,3 @@ function getSkillTags(project) {
     // Remove duplicates
     return [...new Set(skills)];
 }
-
-// CSS for modal (add to style.css)
-const modalStyles = `
-.project-modal-content {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-    max-width: 1000px;
-    max-height: 90vh;
-    background: rgba(10, 10, 24, 0.98);
-    border: 2px solid var(--primary);
-    border-radius: 10px;
-    overflow: hidden;
-    z-index: 2001;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 50px rgba(108, 92, 231, 0.5);
-    backdrop-filter: blur(10px);
-}
-
-.project-modal-header {
-    background: rgba(15, 15, 35, 0.9);
-    padding: 20px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid rgba(108, 92, 231, 0.3);
-}
-
-.project-modal-header h3 {
-    font-family: var(--font-digital);
-    color: var(--light);
-    font-size: 1.5rem;
-}
-
-.project-modal-close {
-    background: rgba(108, 92, 231, 0.2);
-    border: 1px solid var(--primary);
-    color: var(--light);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: all 0.3s;
-}
-
-.project-modal-close:hover {
-    background: var(--primary);
-    transform: rotate(90deg);
-}
-
-.project-modal-body {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-}
-
-.project-modal-main {
-    flex: 2;
-    padding: 30px;
-    overflow-y: auto;
-}
-
-.project-modal-sidebar {
-    flex: 1;
-    background: rgba(15, 15, 35, 0.7);
-    padding: 30px;
-    border-left: 1px solid rgba(108, 92, 231, 0.3);
-    overflow-y: auto;
-}
-
-.project-modal-icon {
-    font-size: 4rem;
-    color: var(--primary);
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.project-modal-tech {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 20px;
-}
-
-.project-modal-description {
-    color: #ccc;
-    line-height: 1.8;
-    margin-bottom: 30px;
-    font-size: 1.1rem;
-}
-
-.project-details-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.detail-section h4 {
-    color: var(--light);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.detail-section h4 i {
-    color: var(--primary);
-}
-
-.detail-section ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.detail-section li {
-    margin-bottom: 8px;
-    color: #ccc;
-    padding-left: 20px;
-    position: relative;
-}
-
-.detail-section li:before {
-    content: '▸';
-    position: absolute;
-    left: 0;
-    color: var(--primary);
-}
-
-.project-stats .stat-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid rgba(108, 92, 231, 0.1);
-}
-
-.stat-label {
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
-.stat-value {
-    color: var(--light);
-    font-weight: 600;
-}
-
-.status-active {
-    color: var(--matrix-green) !important;
-}
-
-.project-links-modal {
-    margin-top: 30px;
-}
-
-.project-links-modal h4 {
-    color: var(--light);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.project-link-modal {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    background: rgba(108, 92, 231, 0.1);
-    border: 1px solid rgba(108, 92, 231, 0.3);
-    color: var(--light);
-    text-decoration: none;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    transition: all 0.3s;
-}
-
-.project-link-modal:hover {
-    background: rgba(108, 92, 231, 0.2);
-    border-color: var(--primary);
-    transform: translateX(5px);
-}
-
-.project-link-modal i {
-    color: var(--primary);
-    width: 20px;
-}
-
-.project-skills {
-    margin-top: 30px;
-}
-
-.project-skills h4 {
-    color: var(--light);
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.skills-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-tag {
-    background: rgba(0, 206, 201, 0.1);
-    color: var(--secondary);
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.project-modal-footer {
-    background: rgba(15, 15, 35, 0.9);
-    padding: 20px 30px;
-    border-top: 1px solid rgba(108, 92, 231, 0.3);
-}
-
-.project-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-@media (max-width: 768px) {
-    .project-modal-body {
-        flex-direction: column;
-    }
-    
-    .project-modal-sidebar {
-        border-left: none;
-        border-top: 1px solid rgba(108, 92, 231, 0.3);
-    }
-    
-    .project-actions {
-        flex-direction: column;
-    }
-}
-`;
-
-// Add modal styles to document
-const styleSheet = document.createElement("style");
-styleSheet.textContent = modalStyles;
-document.head.appendChild(styleSheet);
