@@ -1,4 +1,4 @@
-# 🌀 Game Development Portfolio - Dimension Riss
+# 🎮 Dennis Gulyas - Game Development Portfolio
 
 Ein einzigartiges Game Development Portfolio mit **Stranger Things/80er Sci-Fi Theme**, komplett mit interaktiven Dimension Riss Effekten.
 
@@ -18,8 +18,19 @@ Ein einzigartiges Game Development Portfolio mit **Stranger Things/80er Sci-Fi T
 Das Portfolio ist live verfügbar unter:  
 🌐 **https://d-gulyas.github.io/Portfolio-2.0/**
 
-## 📁 Projektstruktur
+## 👨‍💻 Über mich
 
+**Dennis Gulyas** - 30 Jahre jung  
+Informationstechnischer Assistent - Fachrichtung Game Development  
+Bib International College
+
+### Skills:
+- **Programmiersprachen**: Java, HTML/CSS, C#, PHP, SQL, Python
+- **Engines**: Unity, Unreal Engine
+- **3D-Modellierung**: Blender
+- **Tools**: Git, VS Code, Adobe Creative Suite
+
+## 📁 Projektstruktur
 portfolio-dimension/
 ├── index.html # Haupt HTML Datei
 ├── css/
