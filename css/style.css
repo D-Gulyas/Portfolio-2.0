@@ -80,9 +80,12 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
+/* KORREKTUR: Titel-Nummer behält immer ihre Farbe */
 .title-number {
-    color: var(--primary);
+    color: var(--primary) !important; /* !important um sicherzustellen */
     margin-right: 10px;
+    font-family: var(--font-digital);
+    font-weight: 700;
 }
 
 .section-line {
@@ -214,7 +217,7 @@ h1, h2, h3, h4 {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 100px 20px 50px;
+    padding: 120px 20px 50px; /* Mehr padding oben für Welcome Message */
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
@@ -226,6 +229,32 @@ h1, h2, h3, h4 {
     flex: 1;
     z-index: 2;
     width: 100%;
+}
+
+/* Willkommensnachricht über der Terminal-Box */
+.welcome-message {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 2.5rem;
+    color: var(--light);
+    margin-bottom: 15px;
+    text-shadow: 0 0 15px rgba(108, 92, 231, 0.5);
+    animation: welcomePulse 4s infinite alternate;
+}
+
+.welcome-subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary);
+    font-family: var(--font-mono);
+    letter-spacing: 2px;
+}
+
+@keyframes welcomePulse {
+    0% { opacity: 0.9; text-shadow: 0 0 15px rgba(108, 92, 231, 0.5); }
+    100% { opacity: 1; text-shadow: 0 0 25px rgba(108, 92, 231, 0.8); }
 }
 
 .terminal-window {
@@ -287,10 +316,12 @@ h1, h2, h3, h4 {
     overflow-wrap: break-word;
 }
 
+/* KORREKTUR: Prompt behält immer seine Farbe */
 .prompt {
-    color: var(--primary);
+    color: var(--primary) !important; /* !important um sicherzustellen */
     margin-right: 10px;
     font-weight: bold;
+    font-family: var(--font-mono);
 }
 
 .glow-text {
@@ -313,15 +344,6 @@ h1, h2, h3, h4 {
     50% { opacity: 0.5; }
 }
 
-.cursor {
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
-
 .hero-actions {
     display: flex;
     gap: 20px;
@@ -336,13 +358,18 @@ h1, h2, h3, h4 {
     align-items: center;
     z-index: 2;
     width: 100%;
+    padding: 40px 0; /* Mehr Platz für den Cube */
 }
 
+/* KORREKTUR: Größerer Container für den Cube auf Mobile */
 .hologram-display {
-    width: 250px; /* Verkleinert von 300px */
-    height: 250px; /* Verkleinert von 300px */
+    width: 350px; /* Vergrößert von 250px */
+    height: 350px; /* Vergrößert von 250px */
     position: relative;
     perspective: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hologram-cube {
@@ -363,18 +390,19 @@ h1, h2, h3, h4 {
     justify-content: center;
     align-items: center;
     font-family: var(--font-digital);
-    font-size: 1.2rem; /* Verkleinert von 1.5rem */
+    font-size: 1.8rem; /* Größere Schrift */
     font-weight: bold;
     color: var(--light);
     border-radius: 10px;
+    text-shadow: 0 0 10px rgba(108, 92, 231, 0.5);
 }
 
-.cube-face.front { transform: translateZ(125px); }
-.cube-face.back { transform: rotateY(180deg) translateZ(125px); }
-.cube-face.right { transform: rotateY(90deg) translateZ(125px); }
-.cube-face.left { transform: rotateY(-90deg) translateZ(125px); }
-.cube-face.top { transform: rotateX(90deg) translateZ(125px); }
-.cube-face.bottom { transform: rotateX(-90deg) translateZ(125px); }
+.cube-face.front { transform: translateZ(175px); }
+.cube-face.back { transform: rotateY(180deg) translateZ(175px); }
+.cube-face.right { transform: rotateY(90deg) translateZ(175px); }
+.cube-face.left { transform: rotateY(-90deg) translateZ(175px); }
+.cube-face.top { transform: rotateX(90deg) translateZ(175px); }
+.cube-face.bottom { transform: rotateX(-90deg) translateZ(175px); }
 
 @keyframes rotateCube {
     0% { transform: rotateX(0) rotateY(0); }
@@ -422,6 +450,11 @@ h1, h2, h3, h4 {
     overflow: hidden;
     height: 100%;
     width: 100%;
+}
+
+/* KORREKTUR: Info-Terminal Prompts */
+.about-info .prompt {
+    color: var(--primary) !important;
 }
 
 .about-description h3 {
@@ -667,7 +700,7 @@ h1, h2, h3, h4 {
 /* VERKLEINERTE PROJECT LINKS */
 .project-links {
     display: flex;
-    gap: 10px; /* Reduziert von 15px */
+    gap: 10px;
     margin-top: 20px;
     flex-wrap: wrap;
     width: 100%;
@@ -676,8 +709,8 @@ h1, h2, h3, h4 {
 .project-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px; /* Reduziert von 8px */
-    padding: 8px 14px; /* Reduziert von 10px 20px */
+    gap: 6px;
+    padding: 8px 14px;
     background: rgba(108, 92, 231, 0.2);
     border: 1px solid var(--primary);
     color: var(--light);
@@ -685,7 +718,7 @@ h1, h2, h3, h4 {
     border-radius: 4px;
     font-weight: 600;
     transition: all 0.3s;
-    font-size: 0.85rem; /* Reduzierte Schriftgröße */
+    font-size: 0.85rem;
     white-space: nowrap;
     box-sizing: border-box;
 }
@@ -837,6 +870,11 @@ h1, h2, h3, h4 {
     border-radius: 8px;
     overflow: hidden;
     width: 100%;
+}
+
+/* KORREKTUR: Contact Terminal Prompts */
+.contact-info .prompt {
+    color: var(--primary) !important;
 }
 
 .info-terminal a {
@@ -1081,25 +1119,34 @@ h1, h2, h3, h4 {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
     .hero {
         flex-direction: column;
         text-align: center;
-        gap: 50px;
-        padding: 120px 20px 50px;
+        gap: 60px;
+        padding: 140px 20px 50px;
+    }
+    
+    .hero-visual {
+        order: -1;
+        margin-bottom: 40px;
+    }
+    
+    .welcome-title {
+        font-size: 2rem;
     }
     
     .hologram-display {
-        width: 200px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
     }
     
-    .cube-face.front { transform: translateZ(100px); }
-    .cube-face.back { transform: rotateY(180deg) translateZ(100px); }
-    .cube-face.right { transform: rotateY(90deg) translateZ(100px); }
-    .cube-face.left { transform: rotateY(-90deg) translateZ(100px); }
-    .cube-face.top { transform: rotateX(90deg) translateZ(100px); }
-    .cube-face.bottom { transform: rotateX(-90deg) translateZ(100px); }
+    .cube-face.front { transform: translateZ(150px); }
+    .cube-face.back { transform: rotateY(180deg) translateZ(150px); }
+    .cube-face.right { transform: rotateY(90deg) translateZ(150px); }
+    .cube-face.left { transform: rotateY(-90deg) translateZ(150px); }
+    .cube-face.top { transform: rotateX(90deg) translateZ(150px); }
+    .cube-face.bottom { transform: rotateX(-90deg) translateZ(150px); }
     
     .section-title {
         font-size: 2rem;
@@ -1197,6 +1244,31 @@ h1, h2, h3, h4 {
         max-width: 300px;
         text-align: center;
     }
+    
+    /* KORREKTUR: Größerer Cube auf Mobile */
+    .hologram-display {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .cube-face {
+        font-size: 1.5rem;
+    }
+    
+    .cube-face.front { transform: translateZ(140px); }
+    .cube-face.back { transform: rotateY(180deg) translateZ(140px); }
+    .cube-face.right { transform: rotateY(90deg) translateZ(140px); }
+    .cube-face.left { transform: rotateY(-90deg) translateZ(140px); }
+    .cube-face.top { transform: rotateX(90deg) translateZ(140px); }
+    .cube-face.bottom { transform: rotateX(-90deg) translateZ(140px); }
+    
+    .welcome-title {
+        font-size: 1.8rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1221,6 +1293,26 @@ h1, h2, h3, h4 {
     .filter-btn {
         padding: 8px 15px;
         font-size: 0.8rem;
+    }
+    
+    .hologram-display {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .cube-face {
+        font-size: 1.3rem;
+    }
+    
+    .cube-face.front { transform: translateZ(125px); }
+    .cube-face.back { transform: rotateY(180deg) translateZ(125px); }
+    .cube-face.right { transform: rotateY(90deg) translateZ(125px); }
+    .cube-face.left { transform: rotateY(-90deg) translateZ(125px); }
+    .cube-face.top { transform: rotateX(90deg) translateZ(125px); }
+    .cube-face.bottom { transform: rotateX(-90deg) translateZ(125px); }
+    
+    .welcome-title {
+        font-size: 1.5rem;
     }
 }
 
@@ -1260,4 +1352,35 @@ body, html, .dimension-theme {
         max-width: 100%;
         height: auto;
     }
+    
+    /* Sicherstellen, dass Cube nicht abgeschnitten wird */
+    .hero-visual {
+        padding: 20px 0;
+        min-height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .hologram-display {
+        position: relative;
+        margin: 0 auto;
+    }
+}
+
+/* ===== GLITCH REMOVAL FOR PROMPTS ===== */
+/* Entfernt Glitch-Effekt von allen Prompts und Titel-Nummern */
+.prompt,
+.title-number,
+.section-title:not(.glitch) {
+    position: relative;
+}
+
+.prompt::before,
+.prompt::after,
+.title-number::before,
+.title-number::after,
+.section-title:not(.glitch)::before,
+.section-title:not(.glitch)::after {
+    display: none !important;
 }
