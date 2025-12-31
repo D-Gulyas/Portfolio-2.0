@@ -1384,3 +1384,47 @@ body, html, .dimension-theme {
 .section-title:not(.glitch)::after {
     display: none !important;
 }
+
+/* ===== PROMPT COLOR FIXES ===== */
+/* Höhere Spezifität für Terminal Prompts */
+.terminal-content .prompt,
+.terminal-line .prompt {
+    color: var(--primary) !important;
+    font-weight: bold;
+}
+
+/* Fix für alle Prompts im gesamten Dokument */
+div.prompt,
+span.prompt,
+code.prompt,
+pre .prompt {
+    color: var(--primary) !important;
+}
+
+/* Noch spezifischere Regeln für die Terminal-Sektionen */
+.about-info .info-terminal .terminal-line .prompt,
+.contact-info .info-terminal .terminal-line .prompt {
+    color: var(--primary) !important;
+}
+
+/* Verhindere, dass andere Animationen die Farbe überschreiben */
+.prompt {
+    animation: none !important;
+    text-shadow: none !important;
+}
+
+/* Spezifisch für das ">" Zeichen in Prompts */
+.prompt:contains(">")::after {
+    content: none !important;
+}
+
+/* Direkte Farbe für das ">" Zeichen */
+.prompt::after {
+    color: var(--primary) !important;
+}
+
+/* Spezifische Regel für alle Elemente, die ">" enthalten */
+[class*="prompt"]:contains(">"),
+[class*="prompt"] > *:contains(">") {
+    color: var(--primary) !important;
+}
