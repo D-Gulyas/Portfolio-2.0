@@ -1,26 +1,36 @@
-// DOM geladen
+// Main Application Script
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
+    // Initialize all modules
+    initNavigation();
+    initTypingEffect();
+    initSkillBars();
+    initContactForm();
+    initDimensionEffects();
+    initProjects();
+    initScrollAnimations();
+});
+
+// Navigation
+function initNavigation() {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
     
     if (menuToggle) {
         menuToggle.addEventListener('click', function() {
             navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
+            this.classList.toggle('active');
         });
     }
     
-    // Schließe Mobile Menu beim Klicken auf einen Link
-    const navLinks = document.querySelectorAll('.nav-menu a');
-    navLinks.forEach(link => {
+    // Close menu when clicking on links
+    document.querySelectorAll('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
             menuToggle.classList.remove('active');
         });
     });
     
-    // Smooth Scrolling für Anchor Links
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -37,8 +47,63 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+}
+
+// Typing Effect
+function initTypingEffect() {
+    const typingElement = document.getElementById('typing-text');
+    if (!typingElement) return;
     
-    // Skill-Bars animieren beim Scrollen
+    const messages = [
+        "WILLKOMMEN IM DIMENSIONALEN PORTFOLIO",
+        "SYSTEM STATUS: ONLINE",
+        "LOADING GAME DEVELOPMENT DATA...",
+        "READY FOR INSPECTION"
+    ];
+    
+    let messageIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let isPaused = false;
+    
+    function type() {
+        if (isPaused) return;
+        
+        const currentMessage = messages[messageIndex];
+        
+        if (!isDeleting) {
+            typingElement.textContent = currentMessage.substring(0, charIndex);
+            charIndex++;
+            
+            if (charIndex > currentMessage.length) {
+                isPaused = true;
+                setTimeout(() => {
+                    isPaused = false;
+                    isDeleting = true;
+                    setTimeout(type, 100);
+                }, 2000);
+                return;
+            }
+        } else {
+            typingElement.textContent = currentMessage.substring(0, charIndex);
+            charIndex--;
+            
+            if (charIndex < 0) {
+                isDeleting = false;
+                messageIndex = (messageIndex + 1) % messages.length;
+            }
+        }
+        
+        const speed = isDeleting ? 50 : 100;
+        setTimeout(type, speed);
+    }
+    
+    // Start typing after a short delay
+    setTimeout(type, 1000);
+}
+
+// Skill Bars Animation
+function initSkillBars() {
     const skillItems = document.querySelectorAll('.skill-item');
     
     function animateSkills() {
@@ -53,100 +118,169 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Hilfsfunktion: Überprüfen, ob Element im Viewport ist
-    function isElementInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9 &&
-            rect.bottom >= 0
-        );
-    }
-    
-    // Initial Animation und bei Scroll
+    // Initial check and on scroll
     animateSkills();
     window.addEventListener('scroll', animateSkills);
-    
-    // Formular-Handling
+}
+
+// Contact Form
+function initContactForm() {
     const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Hier würde normalerweise die Formularverarbeitung erfolgen
-            // Für dieses Beispiel zeigen wir nur eine Alert-Nachricht
-            alert('Vielen Dank für Ihre Nachricht! Ich werde mich so schnell wie möglich bei Ihnen melden.');
-            contactForm.reset();
-        });
-    }
+    if (!contactForm) return;
     
-    // Scroll-basierte Navigation Hervorhebung
-    function highlightNavOnScroll() {
-        const sections = document.querySelectorAll('section[id]');
-        const scrollPosition = window.scrollY + 100;
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
         
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.offsetHeight;
-            const sectionId = section.getAttribute('id');
+        // Get form data
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
+        
+        // Simulate sending
+        const statusIndicator = document.querySelector('.status-indicator');
+        const statusText = document.querySelector('.status-text');
+        
+        statusIndicator.style.background = '#ffbd2e';
+        statusText.textContent = 'SENDET...';
+        
+        setTimeout(() => {
+            statusIndicator.style.background = '#27ca3f';
+            statusText.textContent = 'GESENDET!';
+            contactForm.reset();
             
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                document.querySelector(`.nav-menu a[href="#${sectionId}"]`)?.classList.add('active');
-            } else {
-                document.querySelector(`.nav-menu a[href="#${sectionId}"]`)?.classList.remove('active');
-            }
+            // Reset after 3 seconds
+            setTimeout(() => {
+                statusIndicator.style.background = '';
+                statusText.textContent = 'BEREIT ZUM SENDEN';
+            }, 3000);
+        }, 1500);
+    });
+}
+
+// Dimension Effects Controls
+function initDimensionEffects() {
+    const toggleRift = document.getElementById('toggle-rift');
+    const toggleGlitch = document.getElementById('toggle-glitch');
+    const toggleMatrix = document.getElementById('toggle-matrix');
+    
+    const rift = document.querySelector('.dimension-rift');
+    const glitch = document.querySelector('.glitch-overlay');
+    const staticOverlay = document.querySelector('.static-overlay');
+    const matrix = document.querySelector('.matrix-background');
+    
+    // Toggle Rift
+    if (toggleRift && rift) {
+        toggleRift.addEventListener('click', function() {
+            this.classList.toggle('active');
+            rift.style.opacity = this.classList.contains('active') ? '0.3' : '0';
         });
     }
     
-    window.addEventListener('scroll', highlightNavOnScroll);
+    // Toggle Glitch
+    if (toggleGlitch && glitch) {
+        toggleGlitch.addEventListener('click', function() {
+            this.classList.toggle('active');
+            glitch.style.opacity = this.classList.contains('active') ? '0.05' : '0';
+            staticOverlay.style.opacity = this.classList.contains('active') ? '0.03' : '0';
+        });
+    }
     
-    // Fade-in Animation für Elemente beim Scrollen
-    const fadeElements = document.querySelectorAll('.section, .hero-content, .project-card');
+    // Toggle Matrix
+    if (toggleMatrix && matrix) {
+        toggleMatrix.addEventListener('click', function() {
+            this.classList.toggle('active');
+            matrix.style.opacity = this.classList.contains('active') ? '0.03' : '0';
+        });
+    }
+}
+
+// Projects Filter
+function initProjects() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
     
-    function checkFadeElements() {
-        fadeElements.forEach(element => {
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            const filter = this.dataset.filter;
+            
+            // Filter projects
+            projectCards.forEach(card => {
+                const cardFilter = card.dataset.filter || 'all';
+                
+                if (filter === 'all' || filter === cardFilter) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 10);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        });
+    });
+}
+
+// Scroll Animations
+function initScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.section, .project-card, .skill-category');
+    
+    function checkScroll() {
+        animatedElements.forEach(element => {
             if (isElementInViewport(element)) {
-                element.classList.add('fade-in', 'visible');
+                element.classList.add('animated');
             }
         });
     }
     
-    // Initial check und bei Scroll
-    checkFadeElements();
-    window.addEventListener('scroll', checkFadeElements);
+    // Initial check
+    checkScroll();
     
-    // Partikel-Hintergrund initialisieren
-    if (typeof particlesJS !== 'undefined') {
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#6c5ce7" },
-                shape: { type: "circle" },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: "#6c5ce7",
-                    opacity: 0.2,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 2,
-                    direction: "none",
-                    random: true,
-                    straight: false,
-                    out_mode: "out",
-                    bounce: false
-                }
-            },
-            interactivity: {
-                detect_on: "canvas",
-                events: {
-                    onhover: { enable: true, mode: "repulse" },
-                    onclick: { enable: true, mode: "push" }
-                }
+    // Check on scroll
+    window.addEventListener('scroll', checkScroll);
+}
+
+// Helper function: Check if element is in viewport
+function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.9
+    );
+}
+
+// Random Glitch Effects
+function initRandomGlitches() {
+    setInterval(() => {
+        if (Math.random() > 0.7) {
+            const elements = document.querySelectorAll('h1, h2, h3, .terminal-line');
+            if (elements.length > 0) {
+                const randomElement = elements[Math.floor(Math.random() * elements.length)];
+                const originalText = randomElement.textContent;
+                
+                // Create glitched version
+                const glitched = originalText.split('').map(char => {
+                    return Math.random() > 0.9 ? String.fromCharCode(65 + Math.floor(Math.random() * 26)) : char;
+                }).join('');
+                
+                randomElement.textContent = glitched;
+                
+                // Restore after short time
+                setTimeout(() => {
+                    randomElement.textContent = originalText;
+                }, 100);
             }
-        });
-    }
-});
+        }
+    }, 3000);
+}
+
+// Initialize random glitches after page load
+setTimeout(initRandomGlitches, 5000);
