@@ -3,264 +3,552 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Developer Portfolio</title>
+    <title>Game Developer Portfolio | Dimension Riss</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/dimension.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500&family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Dimension Riss Effekte -->
+    <div class="dimension-rift" id="dimension-rift"></div>
+    <div class="glitch-overlay"></div>
+    <div class="static-overlay"></div>
+    
     <!-- Hintergrund-Elemente -->
     <div class="particles-container" id="particles-js"></div>
     <div class="grid-overlay"></div>
+    <div class="scanlines"></div>
+    
+    <!-- ASCII Art Hintergrund -->
+    <div class="ascii-background" id="ascii-background"></div>
     
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="nav-logo">DEV<span class="logo-accent">></span></a>
+            <a href="#" class="nav-logo glitch" data-text="DEV>">DEV<span class="logo-accent">></span></a>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Über mich</a></li>
-                <li><a href="#projects">Projekte</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-                <li><a href="https://github.com" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="#home" class="nav-link"><span class="link-text">Home</span></a></li>
+                <li><a href="#about" class="nav-link"><span class="link-text">Über mich</span></a></li>
+                <li><a href="#projects" class="nav-link"><span class="link-text">Projekte</span></a></li>
+                <li><a href="#skills" class="nav-link"><span class="link-text">Skills</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="link-text">Kontakt</span></a></li>
+                <li><a href="https://github.com" target="_blank" class="github-link glitch-btn"><i class="fab fa-github"></i> <span class="link-text">GitHub</span></a></li>
             </ul>
             <button class="menu-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section mit erweiterten Effekten -->
     <section id="home" class="hero">
+        <div class="dimension-gate">
+            <div class="gate-circle gate-1"></div>
+            <div class="gate-circle gate-2"></div>
+            <div class="gate-circle gate-3"></div>
+            <div class="gate-center"></div>
+        </div>
+        
         <div class="hero-content">
-            <h1 class="hero-title">
-                <span class="title-line">HI, ICH BIN</span>
-                <span class="title-name">Dennis Gulyas</span>
+            <h1 class="hero-title glitch-title" data-text="GAME DEVELOPER">
+                <span class="title-line typing-text">WILLKOMMEN IN MEINER DIMENSION</span>
+                <span class="title-name">
+                    <span class="name-part">MAX</span>
+                    <span class="name-part flicker">MUSTERMANN</span>
+                </span>
                 <span class="title-sub">GAME DEVELOPER</span>
             </h1>
-            <p class="hero-description">
-                Ich erschaffe immersive Welten und innovative Spielerlebnisse 
-                mit modernster Technologie und kreativem Design.
+            
+            <p class="hero-description matrix-text">
+                Ich erschaffe Brücken zwischen Realität und Virtualität.<br>
+                Meine Codezeilen öffnen Portale zu neuen Spielwelten.
             </p>
+            
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Meine Projekte</a>
-                <a href="#contact" class="btn btn-secondary">Kontakt aufnehmen</a>
+                <a href="#projects" class="btn btn-primary portal-btn">
+                    <span class="btn-text">Meine Projekte</span>
+                    <div class="portal-effect"></div>
+                </a>
+                <a href="#contact" class="btn btn-secondary glitch-btn">
+                    <span class="btn-text">Kontakt aufnehmen</span>
+                </a>
+            </div>
+            
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="close-btn"></span>
+                        <span class="minimize-btn"></span>
+                        <span class="maximize-btn"></span>
+                    </div>
+                    <span class="terminal-title">system_terminal.exe</span>
+                </div>
+                <div class="terminal-content">
+                    <p class="terminal-line"><span class="terminal-prompt">></span> loading_portfolio_data...</p>
+                    <p class="terminal-line"><span class="terminal-prompt">></span> initializing_dimension_rift...</p>
+                    <p class="terminal-line"><span class="terminal-prompt">></span> welcome_visitor...</p>
+                    <p class="terminal-line typing"><span class="terminal-prompt">></span> <span class="terminal-cursor">█</span></p>
+                </div>
             </div>
         </div>
+        
         <div class="hero-visual">
-            <div class="cube-container">
-                <div class="cube">
-                    <div class="face front">C#</div>
-                    <div class="face back">HTML / CSS</div>
-                    <div class="face right">Python</div>
-                    <div class="face left">Unity</div>
-                    <div class="face top">PHP</div>
-                    <div class="face bottom">Multiplayer</div>
+            <div class="hologram-container">
+                <div class="hologram">
+                    <div class="hologram-layer layer-1">
+                        <div class="floating-cube">
+                            <div class="cube">
+                                <div class="face front">C#</div>
+                                <div class="face back">Unity</div>
+                                <div class="face right">C++</div>
+                                <div class="face left">Unreal</div>
+                                <div class="face top">3D</div>
+                                <div class="face bottom">VR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hologram-layer layer-2"></div>
+                    <div class="hologram-layer layer-3"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Über mich -->
+    <!-- Über mich mit Cyberpunk-Elementen -->
     <section id="about" class="section about">
+        <div class="data-stream"></div>
         <div class="section-header">
-            <h2 class="section-title"><span class="title-number">01.</span> Über mich</h2>
-            <div class="section-line"></div>
+            <h2 class="section-title glitch" data-text="01. ÜBER MICH">
+                <span class="title-number">01.</span> Über mich
+            </h2>
+            <div class="section-line rift-line"></div>
         </div>
+        
         <div class="about-content">
             <div class="about-text">
-                <p>
-                    Ich bin ein leidenschaftlicher Game Development Student mit Fokus auf 
-                    Programmierung, Gameplay-Design und 3D-Grafiken. Meine Stärken liegen 
-                    in der Umsetzung komplexer Spielmechaniken und der Optimierung von 
-                    Performance in Echtzeit-Anwendungen.
-                </p>
-                <p>
-                    Aktuell studiere ich IT mit Fachrichtung Game Development am 
-                    Bib International College und suche nach spannenden Herausforderungen in 
-                    der Spieleindustrie.
-                </p>
-                <div class="about-details">
-                    <div class="detail-item">
-                        <h3>Bildung</h3>
-                        <p>B.Sc. Game Development</p>
-                        <p>Bib International College, 2023 - heute</p>
+                <div class="cyber-card">
+                    <div class="card-header">
+                        <h3><i class="fas fa-user-secret"></i> IDENTITÄT</h3>
+                        <div class="card-status">
+                            <span class="status-dot active"></span>
+                            ONLINE
+                        </div>
                     </div>
-                    <div class="detail-item">
-                        <h3>Fokus</h3>
-                        <p>Gameplay-Programmierung</p>
-                        <p>3D-Grafik & Shader</p>
+                    <div class="card-content">
+                        <p class="cyber-text">
+                            Ich bin ein interdimensionaler Game Developer, spezialisiert auf die 
+                            <span class="highlight">Verschmelzung von Realität und Virtualität</span>. 
+                            Meine Codezeilen erschaffen Portale zu neuen Spielwelten.
+                        </p>
+                        <p class="cyber-text">
+                            Aktuell navigiere ich durch das IT-Universum mit Fachrichtung 
+                            <span class="highlight">Game Development</span> und suche nach 
+                            dimensionalen Brüchen in der Spieleindustrie.
+                        </p>
+                        
+                        <div class="data-grid">
+                            <div class="data-cell">
+                                <div class="data-icon"><i class="fas fa-graduation-cap"></i></div>
+                                <div class="data-content">
+                                    <h4>BILDUNG</h4>
+                                    <p>B.Sc. Game Development</p>
+                                    <p class="data-sub">Muster-Universität, 2022 - heute</p>
+                                </div>
+                            </div>
+                            <div class="data-cell">
+                                <div class="data-icon"><i class="fas fa-crosshairs"></i></div>
+                                <div class="data-content">
+                                    <h4>FOKUS</h4>
+                                    <p>Gameplay-Programmierung</p>
+                                    <p class="data-sub">3D-Grafik & Shader</p>
+                                </div>
+                            </div>
+                            <div class="data-cell">
+                                <div class="data-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="data-content">
+                                    <h4>DIMENSION</h4>
+                                    <p>Unity/Unreal Reality</p>
+                                    <p class="data-sub">VR/AR Multiverse</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            
             <div class="about-image">
-                <div class="image-frame">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user-secret"></i>
+                <div class="neon-frame">
+                    <div class="frame-border">
+                        <div class="corner corner-tl"></div>
+                        <div class="corner corner-tr"></div>
+                        <div class="corner corner-bl"></div>
+                        <div class="corner corner-br"></div>
+                    </div>
+                    <div class="hologram-avatar">
+                        <div class="avatar-grid">
+                            <div class="grid-line vertical"></div>
+                            <div class="grid-line horizontal"></div>
+                            <div class="avatar-placeholder">
+                                <i class="fas fa-user-astronaut"></i>
+                            </div>
+                        </div>
+                        <div class="avatar-data">
+                            <div class="data-point point-1"></div>
+                            <div class="data-point point-2"></div>
+                            <div class="data-point point-3"></div>
+                            <div class="data-point point-4"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projekte -->
+    <!-- Projekte mit Hologramm-Effekt -->
     <section id="projects" class="section projects">
+        <div class="rift-energy"></div>
         <div class="section-header">
-            <h2 class="section-title"><span class="title-number">02.</span> Meine Projekte</h2>
-            <div class="section-line"></div>
+            <h2 class="section-title glitch" data-text="02. PROJEKTE">
+                <span class="title-number">02.</span> Meine Projekte
+            </h2>
+            <div class="section-line rift-line"></div>
         </div>
+        
+        <div class="projects-filter">
+            <button class="filter-btn active" data-filter="all">Alle Dimensionen</button>
+            <button class="filter-btn" data-filter="unity">Unity</button>
+            <button class="filter-btn" data-filter="unreal">Unreal</button>
+            <button class="filter-btn" data-filter="vr">VR/AR</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
+        
         <div class="projects-grid" id="projects-grid">
             <!-- Projekte werden via JS geladen -->
         </div>
+        
+        <div class="projects-navigation">
+            <button class="nav-arrow prev-arrow"><i class="fas fa-chevron-left"></i></button>
+            <div class="nav-dots"></div>
+            <button class="nav-arrow next-arrow"><i class="fas fa-chevron-right"></i></button>
+        </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Skills mit Sci-Fi Interface -->
     <section id="skills" class="section skills">
+        <div class="cyber-grid"></div>
         <div class="section-header">
-            <h2 class="section-title"><span class="title-number">03.</span> Fähigkeiten & Technologien</h2>
-            <div class="section-line"></div>
+            <h2 class="section-title glitch" data-text="03. SYSTEMSKILLS">
+                <span class="title-number">03.</span> Systems & Skills
+            </h2>
+            <div class="section-line rift-line"></div>
         </div>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3><i class="fas fa-code"></i> Programmierung</h3>
-                <div class="skill-list">
-                    <div class="skill-item" data-level="65">
-                        <span>C# / .NET</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
+        
+        <div class="cyber-interface">
+            <div class="interface-panel">
+                <div class="panel-header">
+                    <h3><i class="fas fa-microchip"></i> SYSTEMDIAGNOSE</h3>
+                    <div class="panel-actions">
+                        <button class="panel-btn scan-btn"><i class="fas fa-sync-alt"></i> Rescan</button>
                     </div>
-                    <div class="skill-item" data-level="10">
-                        <span>C++</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="65">
-                        <span>Python</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="50">
-                        <span>JavaScript</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
+                </div>
+                <div class="panel-content">
+                    <div class="skill-radar">
+                        <canvas id="skill-radar" width="400" height="400"></canvas>
+                        <div class="radar-center">
+                            <div class="radar-dot"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-gamepad"></i> Engines & Tools</h3>
-                <div class="skill-list">
-                    <div class="skill-item" data-level="70">
-                        <span>Unity</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="15">
-                        <span>Unreal Engine</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="60">
-                        <span>Git / GitHub</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="45">
-                        <span>Blender</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
+            
+            <div class="skills-container">
+                <div class="skill-category neon-card">
+                    <div class="card-glow"></div>
+                    <h3><i class="fas fa-code"></i> PROGRAMMIERUNG</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="95">
+                            <span class="skill-name">C# / .NET</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="95"></div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="85">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="85"></div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="90"></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="95">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="95"></div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="skill-category">
-                <h3><i class="fas fa-paint-brush"></i> Design & Konzepte</h3>
-                <div class="skill-list">
-                    <div class="skill-item" data-level="50">
-                        <span>Game Design</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="30">
-                        <span>UI/UX Design</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="30">
-                        <span>3D Modeling</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill-item" data-level="70">
-                        <span>Prototyping</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
+                
+                <div class="skill-category neon-card">
+                    <div class="card-glow"></div>
+                    <h3><i class="fas fa-gamepad"></i> ENGINES & TOOLS</h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="98">
+                            <span class="skill-name">Unity</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="98"></div>
+                                <span class="skill-percent">98%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="80">
+                            <span class="skill-name">Unreal Engine</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="80"></div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="90">
+                            <span class="skill-name">Git / GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="90"></div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-level="75">
+                            <span class="skill-name">Blender</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" data-percent="75"></div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Kontakt -->
+    <!-- Kontakt mit Hologramm-Formular -->
     <section id="contact" class="section contact">
+        <div class="portal-effect"></div>
         <div class="section-header">
-            <h2 class="section-title"><span class="title-number">04.</span> Kontakt</h2>
-            <div class="section-line"></div>
+            <h2 class="section-title glitch" data-text="04. KONTAKTPORTAL">
+                <span class="title-number">04.</span> Kontaktportal
+            </h2>
+            <div class="section-line rift-line"></div>
         </div>
+        
         <div class="contact-content">
-            <div class="contact-info">
-                <h3>Lass uns zusammenarbeiten!</h3>
-                <p>
-                    Ich bin immer offen für neue Herausforderungen und spannende 
-                    Projekte im Bereich Game Development.
+            <div class="contact-info hologram-panel">
+                <div class="panel-glow"></div>
+                <h3><i class="fas fa-broadcast-tower"></i> SIGNAL ÜBERTRAGUNG</h3>
+                <p class="cyber-text">
+                    Sende eine Nachricht durch den Dimensionsriss.<br>
+                    Ich antworte aus der Parallelrealität.
                 </p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>max.mustermann@example.com</span>
+                
+                <div class="contact-matrix">
+                    <div class="matrix-row">
+                        <div class="matrix-cell">
+                            <i class="fas fa-envelope"></i>
+                            <div class="cell-content">
+                                <h4>E-MAIL</h4>
+                                <p>max.mustermann@example.com</p>
+                            </div>
+                        </div>
+                        <div class="matrix-cell">
+                            <i class="fas fa-phone"></i>
+                            <div class="cell-content">
+                                <h4>TELEFON</h4>
+                                <p>+49 123 456789</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>+49 123 456789</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Musterstadt, Deutschland</span>
+                    <div class="matrix-row">
+                        <div class="matrix-cell">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="cell-content">
+                                <h4>STANDORT</h4>
+                                <p>Musterstadt, Deutschland</p>
+                            </div>
+                        </div>
+                        <div class="matrix-cell">
+                            <i class="fas fa-satellite"></i>
+                            <div class="cell-content">
+                                <h4>STATUS</h4>
+                                <p class="status-online"><span class="pulse-dot"></span> ONLINE</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="social-links">
-                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+                
+                <div class="social-portal">
+                    <h4>VERBINDUNGEN</h4>
+                    <div class="portal-links">
+                        <a href="https://github.com" target="_blank" class="portal-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" class="portal-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="portal-link">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="portal-link">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <input type="text" placeholder="Name" required>
+            
+            <form class="contact-form hologram-form" id="contact-form">
+                <div class="form-header">
+                    <h3><i class="fas fa-paper-plane"></i> NACHRICHTENKONSOLE</h3>
+                    <div class="form-status">
+                        <span class="status-indicator"></span>
+                        BEREIT ZUM SENDEN
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" placeholder="E-Mail" required>
+                
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="input-label">
+                            <i class="fas fa-user"></i> IDENTIFIKATION
+                        </label>
+                        <input type="text" class="cyber-input" placeholder="Dein Name" required>
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="input-label">
+                            <i class="fas fa-at"></i> E-MAIL ADRESSE
+                        </label>
+                        <input type="email" class="cyber-input" placeholder="deine@email.de" required>
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label class="input-label">
+                            <i class="fas fa-comment-alt"></i> BETREFF
+                        </label>
+                        <input type="text" class="cyber-input" placeholder="Nachrichtenbetreff" required>
+                        <div class="input-underline"></div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label class="input-label">
+                            <i class="fas fa-envelope-open-text"></i> NACHRICHT
+                        </label>
+                        <textarea class="cyber-textarea" placeholder="Deine interdimensionalen Gedanken..." rows="5" required></textarea>
+                        <div class="input-underline"></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" placeholder="Betreff" required>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-portal">
+                        <span class="btn-text">Nachricht senden</span>
+                        <div class="portal-ring">
+                            <div class="ring-1"></div>
+                            <div class="ring-2"></div>
+                            <div class="ring-3"></div>
+                        </div>
+                    </button>
+                    <button type="reset" class="btn btn-secondary">
+                        <span class="btn-text">Zurücksetzen</span>
+                    </button>
                 </div>
-                <div class="form-group">
-                    <textarea placeholder="Nachricht" rows="5" required></textarea>
+                
+                <div class="form-transmission">
+                    <div class="transmission-bar">
+                        <div class="transmission-progress"></div>
+                    </div>
+                    <p class="transmission-text">Warte auf Übertragung...</p>
                 </div>
-                <button type="submit" class="btn btn-primary">Nachricht senden</button>
             </form>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer mit ASCII Art -->
     <footer class="footer">
         <div class="footer-content">
-            <div class="footer-logo">DEV<span class="logo-accent">></span></div>
-            <p class="footer-text">Erstellt mit Leidenschaft für Game Development</p>
-            <div class="footer-links">
-                <a href="#home">Home</a>
-                <a href="#about">Über mich</a>
-                <a href="#projects">Projekte</a>
-                <a href="#contact">Kontakt</a>
+            <div class="ascii-art">
+                <pre class="ascii-logo">
+   _____                     _        
+  / ____|                   | |       
+ | |  __  ___ _ __ ___   ___| |_ __ _ 
+ | | |_ |/ _ \ '_ ` _ \ / _ \ __/ _` |
+ | |__| |  __/ | | | | |  __/ || (_| |
+  \_____|\___|_| |_| |_|\___|\__\__,_|
+                </pre>
             </div>
-            <p class="footer-copyright">© 2023 Dennis Gulyas. Alle Rechte vorbehalten.</p>
+            
+            <div class="footer-info">
+                <div class="footer-logo glitch" data-text="DEV>">DEV<span class="logo-accent">></span></div>
+                <p class="footer-text matrix-text">Erstellt im Jahr 2023 unserer Zeitrechnung</p>
+                
+                <div class="footer-nav">
+                    <a href="#home" class="footer-link">Home</a>
+                    <a href="#about" class="footer-link">Über mich</a>
+                    <a href="#projects" class="footer-link">Projekte</a>
+                    <a href="#contact" class="footer-link">Kontakt</a>
+                    <a href="#" class="footer-link" id="toggle-rift">Riss aktivieren</a>
+                </div>
+                
+                <div class="copyright">
+                    <p>© 2023 Max Mustermann. Alle Rechte vorbehalten.</p>
+                    <p class="dimension-note">Diese Dimension ist in Entwicklung</p>
+                </div>
+            </div>
+            
+            <div class="terminal-footer">
+                <div class="terminal-line">
+                    <span class="prompt">system@portfolio:~$</span> 
+                    <span class="command">tail -f /var/log/dimension.log</span>
+                </div>
+                <div class="terminal-output" id="footer-terminal"></div>
+            </div>
         </div>
     </footer>
+
+    <!-- Dimension Riss Controls -->
+    <div class="rift-controls">
+        <button class="control-btn" id="toggle-glitch">
+            <i class="fas fa-bolt"></i>
+            <span>Glitch</span>
+        </button>
+        <button class="control-btn" id="toggle-static">
+            <i class="fas fa-tv"></i>
+            <span>Static</span>
+        </button>
+        <button class="control-btn" id="toggle-scanlines">
+            <i class="fas fa-grip-lines"></i>
+            <span>Scanlines</span>
+        </button>
+        <button class="control-btn active" id="toggle-rift-btn">
+            <i class="fas fa-door-open"></i>
+            <span>Riss</span>
+        </button>
+    </div>
 
     <!-- Skripte -->
     <script src="js/particles.js"></script>
     <script src="js/projects.js"></script>
+    <script src="js/dimension.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
