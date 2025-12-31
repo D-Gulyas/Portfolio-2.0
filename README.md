@@ -16,7 +16,7 @@ Ein einzigartiges Game Development Portfolio mit **Stranger Things/80er Sci-Fi T
 ## 🚀 Live Demo
 
 Das Portfolio ist live verfügbar unter:  
-🌐 **https://d-gulyas.github.io/Portfolio-2.0/https://d-gulyas.github.io/Portfolio-2.0/**
+🌐 **https://d-gulyas.github.io/Portfolio-2.0/**
 
 ## 📁 Projektstruktur
 
